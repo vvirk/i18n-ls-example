@@ -1,9 +1,12 @@
 .app {
     font-weight: bold;
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .wrap {
+    margin: 30px auto 0 auto;
+    padding: 5px;
     position: relative;
     width: 100%;
     max-width: 100px;
@@ -11,7 +14,15 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    border-radius: 2px;
+    background: #dfd8d8;
 }
+
+.title {
+    background: #dfd8d8;
+    border-radius: 2px;
+}
+
 .menu {
     position: absolute;
     bottom: -70px;
@@ -20,15 +31,38 @@
     display: flex;
     flex-direction: column;
     &Item {
+        background: none;
+        border: none;
+        font-weight: 700;
         text-transform: uppercase;
         cursor: pointer;
+        &:hover {
+            transition: .5s ease-in;
+            background: #dfd8d8;
+        }
     }
 }
 
 .currentLanguage {
+    border-radius: 2px;
+    background: #dfd8d8;
+    text-transform: uppercase;
     cursor: pointer;
 }
 
 .close {
     display: none;
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 468px) {
+    .app,
+    .title {
+        font-size: 14px;
+    }
 }

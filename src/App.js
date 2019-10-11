@@ -20,7 +20,7 @@ export const App = ({ i18n, t }) => {
   };
   return (
     <div className={s.app}>
-      <h1>{t("title")}</h1>
+      <h1 className={s.title}>{t("title")}</h1>
       <div>{t("description")}</div>
       <div className={s.wrap}>
         <nav className={menu ? s.menu : `${s.menu} ${s.close}`}>
@@ -46,8 +46,9 @@ export const App = ({ i18n, t }) => {
         <div
           className={s.currentLanguage}
           onClick={() => (menu ? toggleMenu(false) : toggleMenu(true))}
+          title="Click to change language"
         >
-          {language}
+          {language} &#x025BE;
         </div>
       </div>
     </div>
