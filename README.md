@@ -11,7 +11,7 @@ Look at GitHub pages:
 
 ### setup
 ```
-git clone https://github.com/Boxing199/i18n-ls-example.git
+git clone https://github.com/vvirk/i18n-ls-example.git
 cd i18n-ls-example
 yarn
 ```
